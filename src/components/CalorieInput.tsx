@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import useCalorieStore from '../store/useCalorieStore';
-import * as input from './input/InputFile';
+import * as input from './InputFile';
 
 const CalorieInput: FC = () => {
   const showForm = useCalorieStore(state => state.showForm)
