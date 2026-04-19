@@ -15,7 +15,7 @@ const CalorieResult: FC = () => {
   return (
     <div className={`counter-result ${showResult ? 'counter-result_active' : ''}`}>
       <ResultItem label="Базальный метаболизм:" value={result.basic} />
-      <ResultItem label="С учетом активности:" value={result.withActivity} />
+      <ResultItem label="С учетом  активности:" value={result.withActivity} />
       <RecalculateButton onClick={showFormOnly} />
     </div>
   );
