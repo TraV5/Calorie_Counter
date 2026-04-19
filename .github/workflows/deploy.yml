@@ -24,7 +24,6 @@ jobs:
       - name: Network Debugging
         run: |
           echo "Checking DNS resolution..."
-          nslookup ${{ secrets.SSH_HOST }}
           echo "Checking network connectivity with netcat..."
           nc -zv -w 10 ${{ secrets.SSH_HOST }} ${{ secrets.SSH_PORT }}
           echo "Checking network connectivity with telnet..."
