@@ -1,12 +1,11 @@
 import type { FC } from 'react';
 import useCalorieStore from '../store/useCalorieStore';
-import GenderField from './input/GenderField';
-import NumericField from './input/NumericField';
-import ActivityField from './input/ActivityField';
-import FormButtons from './input/FormButtons';
+import * as input from './input/InputFile';
 
 const CalorieInput: FC = () => {
   const showForm = useCalorieStore(state => state.showForm)
+
+ 
 
   if (!showForm) {
     return null;
@@ -14,12 +13,12 @@ const CalorieInput: FC = () => {
 
   return (
     <form className="form">
-      <GenderField />
-      <NumericField field="age" label="Возраст (лет)" max={150} />
-      <NumericField field="height" label="Рост (см)" />
-      <NumericField field="weight" label="Вес (кг)" />
-      <ActivityField />
-      <FormButtons />
+      <input.GenderField />
+      <input.NumericField field="age" label="Возраст (лет)" max={150} />
+      <input.NumericField field="height" label="Рост (см)" />
+      <input.NumericField field="weight" label="Вес (кг)" />
+      <input.ActivityField />
+      <input.FormButtons />
     </form>
   )
 }
