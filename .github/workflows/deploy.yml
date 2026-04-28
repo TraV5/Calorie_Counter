@@ -21,14 +21,6 @@ jobs:
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/calorie-counter:latest
       
-      - name: Network Debugging
-        run: |
-          echo "Checking DNS resolution..."
-          echo "Checking network connectivity with netcat..."
-          nc -zv -w 10 ${{ secrets.SSH_HOST }} ${{ secrets.SSH_PORT }}
-          echo "Checking network connectivity with telnet..."
-          curl -v telnet://${{ secrets.SSH_HOST }}:${{ secrets.SSH_PORT }}
-
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:

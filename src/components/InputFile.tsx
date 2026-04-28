@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import useCalorieStore, { type ActivityLevel } from '../store/useCalorieStore';
-import Button from './common/Button';
+import Button from './Button';
 
 const activityOptions = [
   { value: 'minimal', label: 'Минимальная' },

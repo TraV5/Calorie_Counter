@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import Button from '../common/Button';
+import Button from '../Button';
 
 interface RecalculateButtonProps {
   onClick: () => void;
